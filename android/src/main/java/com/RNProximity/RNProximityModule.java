@@ -39,7 +39,7 @@ public class RNProximityModule extends ReactContextBaseJavaModule implements Sen
     mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
   }
 
-  public void sendEvent(String eventName, @Nullable WritableMap params) {
+  public void sendEvent(String eventName, @NonNull WritableMap params) {
     if (this.reactContext.hasActiveCatalystInstance()) {
       this.reactContext
               .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
